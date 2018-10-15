@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour {
 		// player.enabled = false;
 		Player.GetComponent<Renderer> ().enabled = false;
 		// Gravity Reset
-		GravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
+		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
 		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// Point Penalty
