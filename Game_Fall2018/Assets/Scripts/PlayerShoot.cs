@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour {
 	void Start(){
 		//Projectile = GameObject.Find("Projectile"); 
 	}
+	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.RightControl))

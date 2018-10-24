@@ -542,7 +542,6 @@ GameObject:
   m_Component:
   - component: {fileID: 555248512}
   - component: {fileID: 555248511}
-  - component: {fileID: 555248513}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -558,9 +557,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 555248510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f429f816397748b4682860c7498d79ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d1823038c10caa459940235bc08e250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Num: 40
+  Color: Blue
 --- !u!4 &555248512
 Transform:
   m_ObjectHideFlags: 0
@@ -574,18 +575,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &555248513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 555248510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ecc0edead536cb49b09ee27c7a5231d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weather: Raining
 --- !u!1 &559747506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c1bf78cf3c47479169de6484ceff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 50
   PC: {fileID: 609477711}
   EnemyDeath: {fileID: 1504122781}
   ProjectileParticle: {fileID: 1504122781}
@@ -6966,7 +6955,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
