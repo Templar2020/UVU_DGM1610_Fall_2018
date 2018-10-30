@@ -11,6 +11,7 @@ public class LoopsBrother : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		// for(int i=0; i <= 100; i++){
 
 		// 	print(i + " Ants Marching");
