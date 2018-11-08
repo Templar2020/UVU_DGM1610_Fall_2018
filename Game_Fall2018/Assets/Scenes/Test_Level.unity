@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 555248512}
   - component: {fileID: 555248511}
   - component: {fileID: 555248513}
+  - component: {fileID: 555248514}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -582,13 +583,24 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555248510}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16d68f978e3fad469cead5687768fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Eggs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Jedi: []
+--- !u!114 &555248514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555248510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be2949e8ed25f0449e3307d76a76d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &559747506
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +733,6 @@ GameObject:
   - component: {fileID: 609477712}
   - component: {fileID: 609477711}
   - component: {fileID: 609477713}
-  - component: {fileID: 609477714}
   - component: {fileID: 609477715}
   m_Layer: 0
   m_Name: PC
@@ -853,23 +864,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &609477714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 609477708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d1d4b81262ae749b4ca81dd0e86b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 909258139}
-  Player: {fileID: 609477711}
-  DeathParticle: {fileID: 1841086734}
-  RespawnParticle: {fileID: 1841086734}
-  RespawnDelay: 1
-  PointPenaltyOnDeath: 10
 --- !u!114 &609477715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +877,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 2046515161}
   Projectile: {fileID: 1504122781}
+--- !u!1 &629004022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 629004024}
+  - component: {fileID: 629004023}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &629004023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629004022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d1d4b81262ae749b4ca81dd0e86b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 909258139}
+  Player: {fileID: 609477711}
+  PC2: {fileID: 609477708}
+  DeathParticle: {fileID: 1841086734}
+  RespawnParticle: {fileID: 1841086734}
+  RespawnDelay: 1
+  PointPenaltyOnDeath: 10
+--- !u!4 &629004024
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629004022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5309942, y: -3.3645616, z: -0.08577594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684089719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,8 +1775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 50
   PC: {fileID: 609477711}
-  EnemyDeath: {fileID: 1504122781}
-  ProjectileParticle: {fileID: 1504122781}
+  EnemyDeath: {fileID: 1841086734}
+  ProjectileParticle: {fileID: 1841086734}
   PointsForKill: 10
 --- !u!1 &1519209393
 GameObject:
@@ -6810,7 +6851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac79da6d6219ac4793a8d6827ba12d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 609477714}
+  LevelManager: {fileID: 0}
 --- !u!1001 &1969000896
 Prefab:
   m_ObjectHideFlags: 0
@@ -6984,7 +7025,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6995,7 +7036,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046515160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0955, y: 0, z: 0}
+  m_LocalPosition: {x: 0.113, y: -0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 609477710}
