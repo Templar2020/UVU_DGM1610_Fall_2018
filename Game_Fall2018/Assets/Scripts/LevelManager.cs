@@ -24,7 +24,10 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+
 		// Player = FindObjectOfType<Rigidbody2D> ();
+
 	}
 		
 	public void RespawnPlayer(){
